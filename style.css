@@ -78,7 +78,7 @@ footer {
 
 /* for each section  */
 .section {
-  /* width: 100%; */
+  width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -283,6 +283,9 @@ footer {
   }
   .nav-list :not(:last-child) {
     display: none;
+  }
+  .menu-btn{
+    padding: 8px 12px;
   }
 }
 /* Hero banner: ------------------------------------*/
@@ -514,7 +517,7 @@ footer {
   max-width: 50%;
   position: absolute;
   top: 0px;
-  z-index: -999;
+  /* z-index: -999; */
 }
 
 /* left cloud image */

@@ -20,6 +20,28 @@ function copyrightYear() {
   thisYear.innerHTML = year;
 }
 
+// For mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIconOpen = document.getElementById('menuIconOpen');
+  const menuIconClose = document.getElementById('menuIconClose');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  // Event listener for opening the mobile menu
+  menuIconOpen.addEventListener('click', function() {
+    mobileMenu.style.setProperty('display', 'flex', 'important'); // Set mobile menu to flex with !important
+      document.body.classList.add('no-scroll'); // Disable scrolling
+  });
+
+  // Event listener for closing the mobile menu
+  menuIconClose.addEventListener('click', function() {
+      mobileMenu.style.display = 'none'; // Hide the mobile menu
+      document.body.classList.remove('no-scroll'); // Enable scrolling
+  });
+});
+
+
+
+
 // For resizing the hero slider to fit a 59:30 ratio (design size: 1180 x 600)
 function heroSliderResizer() {
   const heroSliderElement = document.getElementById('heroSlider');

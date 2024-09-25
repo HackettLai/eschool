@@ -173,9 +173,68 @@ document.addEventListener('DOMContentLoaded', function () {
     'https://i.imgur.com/MTNHmm3.png',
     'https://i.imgur.com/58Yqllo.png',
     'https://i.imgur.com/poU6TUJ.jpeg',
+    // below from https://www.schooland.hk/ss/school-badge
+    'https://www.schooland.hk/img/ssb/ablmcc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/ats-badge.jpg',
+    'https://www.schooland.hk/img/ssb/chms-badge.jpg',
+    'https://www.schooland.hk/img/ssb/lstc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/hebron-badge.jpg',
+    'https://www.schooland.hk/img/ssb/blmcss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bwlss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/belilios-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bethel-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bhjs-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bfhmc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bhnkc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bhscmc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bkkss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bmf-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bstc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bshlmc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bthc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/btkchc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bwflc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/bwwtc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/byknmc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/canossa-badge.jpg',
+    'https://www.schooland.hk/img/ssb/ccm-badge.jpg',
+    'https://www.schooland.hk/img/ssb/ccvc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/ccym-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cfs-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cmos-badge.jpg',
+    'https://www.schooland.hk/img/ssb/csjss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/tmmarden-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cwcc-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cys-badge.jpg',
+    'https://www.schooland.hk/img/ssb/calfss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cbt-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cdgfss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/chw-badge.jpg',
+    'https://www.schooland.hk/img/ssb/cpu-badge.jpg',
+    'https://www.schooland.hk/img/ssb/carmelss-badge.jpg',
+    'https://www.schooland.hk/img/ssb/chuenyuen-badge.jpg',
   ];
 
   const clientLogoImages = document.querySelectorAll('#clientLogo img');
+  let usedImages = []; // Track used images
+
+  function getRandomImage() {
+    if (imageList.length === 0) {
+      // Reset the imageList when all images have been used
+      imageList.push(...usedImages);
+      usedImages = [];
+    }
+
+    // Get a random index and select image
+    const randomIndex = Math.floor(Math.random() * imageList.length);
+    const selectedImage = imageList[randomIndex];
+
+    // Move the selected image to usedImages and remove it from imageList
+    usedImages.push(selectedImage);
+    imageList.splice(randomIndex, 1);
+
+    return selectedImage;
+  }
 
   // Function to get a random interval within a defined range
   function getRandomInterval(min, max) {
@@ -184,8 +243,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function changeImage(img) {
     const change = () => {
-      // Pick a new random image from the imageList
-      const newImage = imageList[Math.floor(Math.random() * imageList.length)];
+      // Pick a new random image
+      const newImage = getRandomImage();
 
       // Apply fade out effect
       img.classList.remove('fade-in');

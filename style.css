@@ -446,10 +446,10 @@ footer {
   /* Logo image asset must fit to this size */
   height: 52px;
   width: 54px; 
+  transition: opacity 1s ease-in-out;
 }
 .fade {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
 .fade-in {

@@ -1,2 +1,1 @@
-Demo Link:
-https://eschool.hackettlai.com
+Demo Link: https://eschool.hackettlai.com

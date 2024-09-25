@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
@@ -27,273 +26,262 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- stylesheets -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
 
-<body>
-    <div class="section container headerContainer">
+  <body>
+    <!-- nav bar -->
+    <div class="section">
+      <div class="container headerContainer">
         <img src="https://i.imgur.com/kF6nml7.png" />
         <div class="nav-list">
-            <button class="menu-btn currentPage" active>主頁</button>
-            <button class="menu-btn">關於 eSchool</button>
-            <button class="menu-btn">行政系統</button>
-            <button class="menu-btn">校園手機App</button>
-            <button class="menu-btn">網站建構</button>
-            <button class="menu-btn">我們的客戶</button>
-            <button class="menu-btn">聯絡我們</button>
-            <span class="material-symbols-outlined menu-icon" id="menuIconOpen">
-                menu
-            </span>
+          <button class="menu-btn currentPage" active>主頁</button>
+          <button class="menu-btn">關於 eSchool</button>
+          <button class="menu-btn">行政系統</button>
+          <button class="menu-btn">校園手機App</button>
+          <button class="menu-btn">網站建構</button>
+          <button class="menu-btn">我們的客戶</button>
+          <button class="menu-btn">聯絡我們</button>
+          <span class="material-symbols-outlined menu-icon" id="menuIconOpen"> menu </span>
         </div>
+        <!-- mobile nav bar -->
         <div class="mobile-menu" id="mobileMenu">
-            <span class="material-symbols-outlined menu-icon" id="menuIconClose" style="color: var(--main-green-0);">
-                close
-            </span>
-            <button class="menu-btn currentPage" active>主頁</button>
-            <button class="menu-btn">關於 eSchool</button>
-            <button class="menu-btn">行政系統</button>
-            <button class="menu-btn">校園手機App</button>
-            <button class="menu-btn">網站建構</button>
-            <button class="menu-btn">我們的客戶</button>
-            <button class="menu-btn">聯絡我們</button>
+          <span class="material-symbols-outlined menu-icon" id="menuIconClose" style="color: var(--main-green-0)"> close </span>
+          <button class="menu-btn currentPage" active>主頁</button>
+          <button class="menu-btn">關於 eSchool</button>
+          <button class="menu-btn">行政系統</button>
+          <button class="menu-btn">校園手機App</button>
+          <button class="menu-btn">網站建構</button>
+          <button class="menu-btn">我們的客戶</button>
+          <button class="menu-btn">聯絡我們</button>
         </div>
+      </div>
     </div>
     <!-- hero slider -->
-    <div class="section container slider" id="heroSlider">
+    <div class="section flex-col">
+      <div class="container slider" id="heroSlider">
         <!-- slide controls -->
         <div class="slider-control flex-col">
-            <div class="slide-btn active" data-slide="1"><span>1</span></div>
-            <div class="slider-control-line"></div>
-            <div class="slide-btn" data-slide="2"><span>2</span></div>
-            <div class="slider-control-line"></div>
-            <div class="slide-btn" data-slide="3"><span>3</span></div>
-            <div class="slider-control-line"></div>
-            <div class="slide-btn" data-slide="4"><span>4</span></div>
+          <div class="slide-btn active" data-slide="1"><span>1</span></div>
+          <div class="slider-control-line"></div>
+          <div class="slide-btn" data-slide="2"><span>2</span></div>
+          <div class="slider-control-line"></div>
+          <div class="slide-btn" data-slide="3"><span>3</span></div>
+          <div class="slider-control-line"></div>
+          <div class="slide-btn" data-slide="4"><span>4</span></div>
         </div>
         <!-- slide 1 -->
         <div class="slide active" id="slide1">
-            <p>提升工作效率</p>
-            <p>一系列校園系統</p>
+          <p>提升工作效率</p>
+          <p>一系列校園系統</p>
         </div>
 
         <!-- slide 2 -->
         <div class="slide" id="slide2">
-            <p>電子學校平台</p>
-            <p>全功能行政平台</p>
+          <p>電子學校平台</p>
+          <p>全功能行政平台</p>
         </div>
         <!-- slide 3 -->
         <div class="slide" id="slide3">
-            <p>手機APP+SMS+EMAIL</p>
-            <p>讓家校溝通無間斷</p>
+          <p>手機APP+SMS+EMAIL</p>
+          <p>讓家校溝通無間斷</p>
         </div>
         <!-- slide 4 -->
         <div class="slide" id="slide4">
-            <p>電子化校園工作流程</p>
-            <p>實現無紙張環保校園</p>
+          <p>電子化校園工作流程</p>
+          <p>實現無紙張環保校園</p>
         </div>
+      </div>
     </div>
-    <!-- 我們的服務 -->
-    <div class="section first-section">
+    <div class="main-container flex-col">
+      <!-- 我們的服務 -->
+      <div class="section">
         <div class="container flex-2Col">
-            <div class="section container flex-col flex-left">
-                <p class="title">我們的服務</p>
-                <p class="sub-title">eSchool電子學校平台</p>
-                <p class="body-text">
-                    我們致力開拓校園行政系統、手機應用程式及學校網站，提升校園工作效率，加強家校溝通，共創綠色無紙張校園。一系列校園行政系統，包括訓導、招生、收費、考勤、圖書館、設施預訂等，更可度身訂做，適切學校獨特需要。
-                </p>
-                <p class="sub-title">主要功能及服務</p>
-                <p class="body-text">我們的行政系統提供全面、高效的管理解決方案，助您輕鬆處理校務。而校園手機App則讓您隨時隨地掌握校園資訊，提升互動與便利性。</p>
-                <div class="flex-row gap-20">
-                    <button class="btn">關於行政系統</button>
-                    <button class="btn">關於校園手機App</button>
-                </div>
+          <div class="section container flex-col">
+            <p class="title">我們的服務</p>
+            <p class="sub-title">eSchool電子學校平台</p>
+            <p class="body-text">我們致力開拓校園行政系統、手機應用程式及學校網站，提升校園工作效率，加強家校溝通，共創綠色無紙張校園。一系列校園行政系統，包括訓導、招生、收費、考勤、圖書館、設施預訂等，更可度身訂做，適切學校獨特需要。</p>
+            <p class="sub-title">主要功能及服務</p>
+            <p class="body-text">我們的行政系統提供全面、高效的管理解決方案，助您輕鬆處理校務。而校園手機App則讓您隨時隨地掌握校園資訊，提升互動與便利性。</p>
+            <div class="flex-row gap-20">
+              <button class="btn">關於行政系統</button>
+              <button class="btn">關於校園手機App</button>
             </div>
-            <div class="flex-1">
-                <img style="width: 100%" src="https://i.imgur.com/oiBsswC.png" />
-            </div>
+          </div>
+          <div class="container">
+            <img style="width: 100%" src="https://i.imgur.com/oiBsswC.png" />
+          </div>
         </div>
-    </div>
-    <!-- Client Logo -->
-    <div class="section container flex-grid client-logo">
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-        <img class="client-logo" src="https://i.imgur.com/6WTAEzP.png" />
-    </div>
-    <!-- 精選案例 -->
-    <div class="section no-gap">
+      </div>
+      <!-- Client Logo -->
+      <div class="section container flex-grid client-logo-container" id="clientLogo">
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+      </div>
+      <!-- 精選案例 -->
+      <div class="section no-gap">
         <div class="divider-school"></div>
         <div class="full-width-bg flex-col">
-            <div class="container flex-col">
-                <p class="title">精選案例</p>
-                <p class="sub-title"><img src="https://svgshare.com/i/1Ab_.svg" class="inline-icon" />量身打造校園方案，緊密連結教育新未來
-                </p>
-                <p class="body-text">精選案例說明我們如何與各校園緊密合作，深入了解每所學校的獨特需要與校園文化， 打造量身定制的綜合系統方案。</p>
+          <div class="container flex-col">
+            <p class="title">精選案例</p>
+            <p class="sub-title"><img src="https://svgshare.com/i/1Ab_.svg" class="inline-icon" />量身打造校園方案，緊密連結教育新未來</p>
+            <p class="body-text">精選案例說明我們如何與各校園緊密合作，深入了解每所學校的獨特需要與校園文化， 打造量身定制的綜合系統方案。</p>
+          </div>
+          <!-- case grid -->
+          <div class="container flex-grid">
+            <!-- case 1 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">保良局馬錦明中學</p>
+              <p class="case-content body-text">本校使用 eSchool 訓導及電子通告系統，行政效率顯著提升，與家長的溝通更為直接及方便。系統能作校本優化，切合校情需要，工作效率卓越。</p>
+              <button class="btn">了解更多</button>
             </div>
-            <div class="container flex-grid">
-                <!-- case 1 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">保良局馬錦明中學</p>
-                    <p class="case-content body-text">本校使用 eSchool
-                        訓導及電子通告系統，行政效率顯著提升，與家長的溝通更為直接及方便。系統能作校本優化，切合校情需要，工作效率卓越。</p>
-                    <button class="btn">了解更多</button>
-                </div>
-                <!-- case 2 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">迦密愛禮信中學</p>
-                    <p class="case-content body-text">
-                        通過引入新的eSchool訓導管理系統，我們在工作上的限制減少了，而效率也大大提升了。由於系統的編寫程式建基於網絡架構，故此學校的教職員便可以隨時隨地去處理訓導部各種事務。</p>
-                    <button class="btn">了解更多</button>
-                </div>
-                <!-- case 3 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">宣道會陳朱素華紀念中學</p>
-                    <p class="case-content body-text">
-                        透過eSchool課外活動管理系統，老師很容易能製作課外活動通告、活動會員通傳紙、全方位資助簽收表、集會點名紙等文件，減省不少文書上的工作。此外透過系統，每名學生的資助情況，即時記錄於系統內，資助的使用情況一目了然，方便跟進。
-                    </p>
-                    <button class="btn">了解更多</button>
-                </div>
-                <!-- case 4 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">香港道教聯合會青松中學</p>
-                    <p class="case-content body-text">
-                        學校採用eSchool手機程式(App)，讓家長可透過智能手機瀏覽學校資訊、查閱子女到校及離校時間、答覆學校通告等，使他們可隨時隨地收到學校發放的各種資訊，滿足家長的使用需求。</p>
-                    <button class="btn">了解更多</button>
-                </div>
-                <!-- case 5 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">迦密愛禮信小學</p>
-                    <p class="case-content body-text">
-                        迦密愛禮信小學每年需要處理大量的收費項目，教師需要負責處理現金收費。學校會計部亦需要人手處理數據和製作不同財務報告表。通過引入新的eSchool收費系統，收費數據能夠有效地建立，付款程序亦可透過電子交易完成，這不僅提高了工作效率，亦減少教師與學生之間現金交易過程中的問題。
-                    </p>
-                    <button class="btn">了解更多</button>
-                </div>
-                <!-- case 6 -->
-                <div class="case-item">
-                    <img src="https://i.imgur.com/6WTAEzP.png" />
-                    <p class="case-school">宣道幼稚園</p>
-                    <p class="case-content body-text">
-                        宣道幼稚園每年需要處理幾千份新生入學申請。在流程中大量郵件和資料需要處理，文件堆積如山，幼稚園需要動用許多行政人員及老師，幫手處理。通過引入新的eSchool招生系統，招生流程電子化，從網上申請，安排分配面試，發送通知，新生錄取等，大量節省了人力和郵寄。
-                    </p>
-                    <button class="btn">了解更多</button>
-                </div>
+            <!-- case 2 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">迦密愛禮信中學</p>
+              <p class="case-content body-text">通過引入新的eSchool訓導管理系統，我們在工作上的限制減少了，而效率也大大提升了。由於系統的編寫程式建基於網絡架構，故此學校的教職員便可以隨時隨地去處理訓導部各種事務。</p>
+              <button class="btn">了解更多</button>
             </div>
+            <!-- case 3 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">宣道會陳朱素華紀念中學</p>
+              <p class="case-content body-text">透過eSchool課外活動管理系統，老師很容易能製作課外活動通告、活動會員通傳紙、全方位資助簽收表、集會點名紙等文件，減省不少文書上的工作。此外透過系統，每名學生的資助情況，即時記錄於系統內，資助的使用情況一目了然，方便跟進。</p>
+              <button class="btn">了解更多</button>
+            </div>
+            <!-- case 4 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">香港道教聯合會青松中學</p>
+              <p class="case-content body-text">學校採用eSchool手機程式(App)，讓家長可透過智能手機瀏覽學校資訊、查閱子女到校及離校時間、答覆學校通告等，使他們可隨時隨地收到學校發放的各種資訊，滿足家長的使用需求。</p>
+              <button class="btn">了解更多</button>
+            </div>
+            <!-- case 5 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">迦密愛禮信小學</p>
+              <p class="case-content body-text">迦密愛禮信小學每年需要處理大量的收費項目，教師需要負責處理現金收費。學校會計部亦需要人手處理數據和製作不同財務報告表。通過引入新的eSchool收費系統，收費數據能夠有效地建立，付款程序亦可透過電子交易完成，這不僅提高了工作效率，亦減少教師與學生之間現金交易過程中的問題。</p>
+              <button class="btn">了解更多</button>
+            </div>
+            <!-- case 6 -->
+            <div class="case-item">
+              <img src="https://i.imgur.com/6WTAEzP.png" />
+              <p class="case-school">宣道幼稚園</p>
+              <p class="case-content body-text">宣道幼稚園每年需要處理幾千份新生入學申請。在流程中大量郵件和資料需要處理，文件堆積如山，幼稚園需要動用許多行政人員及老師，幫手處理。通過引入新的eSchool招生系統，招生流程電子化，從網上申請，安排分配面試，發送通知，新生錄取等，大量節省了人力和郵寄。</p>
+              <button class="btn">了解更多</button>
+            </div>
+          </div>
         </div>
+        <!-- section end deco  -->
         <div class="cloud-section-end">
-            <img src="https://i.imgur.com/Z82aXuQ.png" />
-            <div></div>
-            <img src="https://i.imgur.com/Q1zmJHT.png" />
+          <img src="https://i.imgur.com/Z82aXuQ.png" />
+          <div></div>
+          <img src="https://i.imgur.com/Q1zmJHT.png" />
         </div>
-    </div>
-    </div>
-    <!-- 客户評語 -->
-    <div class="section">
+      </div>
+      <!-- 客户評語 -->
+      <div class="section">
         <div class="container flex-col">
-            <img src="https://svgshare.com/i/1AcV.svg" style="height: 88px; align-self: unset" />
-            <p class="title">客户評語</p>
+          <img src="https://svgshare.com/i/1AcV.svg" style="height: 88px; align-self: unset" />
+          <p class="title">客户評語</p>
 
-            <p class="sub-title">引領校園未來，創造卓越學習體驗</p>
-            <p class="body-text">謝謝各界的支持與評價，我們致力於持續提供卓越的學校平台，為每個校園帶來全新體驗</p>
+          <p class="sub-title">引領校園未來，創造卓越學習體驗</p>
+          <p class="body-text">謝謝各界的支持與評價，我們致力於持續提供卓越的學校平台，為每個校園帶來全新體驗</p>
         </div>
         <!-- 客户評語 testimonial grid -->
         <div class="container flex-grid">
-            <!-- testimonial 1 -->
-            <div class="card-testimonial">
-                <div class="upper">
-                    <img src="https://svgshare.com/i/1Acb.svg" />
+          <!-- testimonial 1 -->
+          <div class="card-testimonial">
+            <div class="upper">
+              <img src="https://svgshare.com/i/1Acb.svg" />
 
-                    <p class="quote">他們的團隊專業可靠，用心工作，努力滿足並跟進我們的需要 !</p>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <img src="https://i.imgur.com/6WTAEzP.png" />
-                        <div class="content">
-                            <p class="name">崔校長</p>
-                            <p class="school">迦密愛禮信小學</p>
-                        </div>
-                    </div>
-                    <div class="bubble-end">
-                        <span></span>
-                    </div>
-                </div>
+              <p class="quote">他們的團隊專業可靠，用心工作，努力滿足並跟進我們的需要 !</p>
             </div>
-            <!-- testimonial 2 -->
-            <div class="card-testimonial">
-                <div class="upper">
-                    <img src="https://svgshare.com/i/1Acb.svg" />
+            <div class="bottom">
+              <div class="info">
+                <img src="https://i.imgur.com/6WTAEzP.png" />
+                <div class="content">
+                  <p class="name">崔校長</p>
+                  <p class="school">迦密愛禮信小學</p>
+                </div>
+              </div>
+              <div class="bubble-end">
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <!-- testimonial 2 -->
+          <div class="card-testimonial">
+            <div class="upper">
+              <img src="https://svgshare.com/i/1Acb.svg" />
 
-                    <p class="quote">公司提供的服務十分滿意，因校本需要提供專業意見，服務態度認真，價錢合理，售後服務優良，讓學校行政運作暢順!</p>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <img src="https://i.imgur.com/6WTAEzP.png" />
-                        <div class="content">
-                            <p class="name">郭校長</p>
-                            <p class="school">宣道幼稚園</p>
-                        </div>
-                    </div>
-                    <div class="bubble-end">
-                        <span></span>
-                    </div>
-                </div>
+              <p class="quote">公司提供的服務十分滿意，因校本需要提供專業意見，服務態度認真，價錢合理，售後服務優良，讓學校行政運作暢順!</p>
             </div>
-            <!-- testimonial 3 -->
-            <div class="card-testimonial">
-                <div class="upper">
-                    <img src="https://svgshare.com/i/1Acb.svg" />
+            <div class="bottom">
+              <div class="info">
+                <img src="https://i.imgur.com/6WTAEzP.png" />
+                <div class="content">
+                  <p class="name">郭校長</p>
+                  <p class="school">宣道幼稚園</p>
+                </div>
+              </div>
+              <div class="bubble-end">
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <!-- testimonial 3 -->
+          <div class="card-testimonial">
+            <div class="upper">
+              <img src="https://svgshare.com/i/1Acb.svg" />
 
-                    <p class="quote">系統能配合本校各樣獨特需要的訓育措施，度身設計，靈活性高，系統設計準繩，運作穩定順暢!</p>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <img src="https://i.imgur.com/6WTAEzP.png" />
-                        <div class="content">
-                            <p class="name">廖校長</p>
-                            <p class="school">宣道會陳朱素華紀念中學</p>
-                        </div>
-                    </div>
-                    <div class="bubble-end">
-                        <span></span>
-                    </div>
-                </div>
+              <p class="quote">系統能配合本校各樣獨特需要的訓育措施，度身設計，靈活性高，系統設計準繩，運作穩定順暢!</p>
             </div>
+            <div class="bottom">
+              <div class="info">
+                <img src="https://i.imgur.com/6WTAEzP.png" />
+                <div class="content">
+                  <p class="name">廖校長</p>
+                  <p class="school">宣道會陳朱素華紀念中學</p>
+                </div>
+              </div>
+              <div class="bubble-end">
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Ending section -->
-    <div class="section">
+      </div>
+
+      <!-- Ending section -->
+      <div class="section">
         <div class="container flex-col">
-            <img src="https://i.imgur.com/mibYsnY.png" style="width: 698px; max-width:100%;" />
-            <p class="title">提升校園工作效率，加強家校溝通，共創綠色校園</p>
-            <p class="body-text align-center ">在現代校園中，我們致力於透過創新的平台提升工作效率，打造無縫的家校溝通橋樑。
-                同時，我們積極推動環保舉措，共同建構健康的綠色校園環境，為每位師生創造更美好的明天。</p>
-            <button class="btn">立即聯絡我們！</button>
+          <img src="https://i.imgur.com/mibYsnY.png" style="width: 698px; max-width: 100%" />
+          <p class="title">提升校園工作效率，加強家校溝通，共創綠色校園</p>
+          <p class="body-text align-center">在現代校園中，我們致力於透過創新的平台提升工作效率，打造無縫的家校溝通橋樑。 同時，我們積極推動環保舉措，共同建構健康的綠色校園環境，為每位師生創造更美好的明天。</p>
+          <button class="btn">立即聯絡我們！</button>
         </div>
+      </div>
     </div>
     <!-- footer -->
     <footer>Copyright © 2013 - <span id="thisYear"></span> eSchool. All Rights Reserved.</footer>
     <!-- scripts -->
     <script src="function.js"></script>
-</body>
-
+  </body>
 </html>

@@ -21,26 +21,23 @@ function copyrightYear() {
 }
 
 // For mobile menu
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const menuIconOpen = document.getElementById('menuIconOpen');
   const menuIconClose = document.getElementById('menuIconClose');
   const mobileMenu = document.getElementById('mobileMenu');
 
   // Event listener for opening the mobile menu
-  menuIconOpen.addEventListener('click', function() {
+  menuIconOpen.addEventListener('click', function () {
     mobileMenu.style.setProperty('display', 'flex', 'important'); // Set mobile menu to flex with !important
-      document.body.classList.add('no-scroll'); // Disable scrolling
+    document.body.classList.add('no-scroll'); // Disable scrolling
   });
 
   // Event listener for closing the mobile menu
-  menuIconClose.addEventListener('click', function() {
-      mobileMenu.style.display = 'none'; // Hide the mobile menu
-      document.body.classList.remove('no-scroll'); // Enable scrolling
+  menuIconClose.addEventListener('click', function () {
+    mobileMenu.style.display = 'none'; // Hide the mobile menu
+    document.body.classList.remove('no-scroll'); // Enable scrolling
   });
 });
-
-
-
 
 // For resizing the hero slider to fit a 59:30 ratio (design size: 1180 x 600)
 function heroSliderResizer() {
@@ -165,6 +162,58 @@ function heroSliderAutoPlay() {
     }, timeInterval);
   });
 }
+
+// For 我們的服務's Client logos
+document.addEventListener('DOMContentLoaded', function () {
+  const imageList = [
+    // Add more images list here
+    'https://i.imgur.com/6WTAEzP.png',
+    'https://i.imgur.com/oJ7Nc2N.jpeg',
+    'https://i.imgur.com/tM0xd07.jpeg',
+    'https://i.imgur.com/MTNHmm3.png',
+    'https://i.imgur.com/58Yqllo.png',
+    'https://i.imgur.com/poU6TUJ.jpeg',
+  ];
+
+  const clientLogoImages = document.querySelectorAll('#clientLogo img');
+
+  // Function to get a random interval within a defined range
+  function getRandomInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function changeImage(img) {
+    const change = () => {
+      // Pick a new random image from the imageList
+      const newImage = imageList[Math.floor(Math.random() * imageList.length)];
+
+      // Apply fade out effect
+      img.classList.remove('fade-in');
+      img.classList.add('fade');
+
+      setTimeout(() => {
+        img.src = newImage;
+
+        // After changing the image, apply fade in effect
+        img.classList.remove('fade');
+        img.classList.add('fade-in');
+      }, 1000); // Delay for fade out to complete before changing the src
+
+      // Set a new random interval for the next change
+      const newInterval = getRandomInterval(3000, 20000); // Random interval between 3000ms and 8000ms
+      setTimeout(change, newInterval); // Change the image again after the new interval
+    };
+
+    // Perform the first change immediately
+    change();
+  }
+
+  // Initialize the changeImages function for each image
+  clientLogoImages.forEach((img) => {
+    img.classList.add('fade-in'); // Initialize fade-in effect for the first load
+    changeImage(img);
+  });
+});
 
 // For 精選案例's tooltips
 document.addEventListener('DOMContentLoaded', () => {

@@ -443,8 +443,9 @@ footer {
   gap: 40px;
 }
 .client-logo-container img {
+  /* Logo image asset must fit to this size */
   height: 52px;
-  width: 54px;
+  width: 54px; 
 }
 .fade {
   opacity: 0;

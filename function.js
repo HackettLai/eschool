@@ -166,7 +166,7 @@ function heroSliderAutoPlay() {
 // For 我們的服務's Client logos
 document.addEventListener('DOMContentLoaded', function () {
   const imageList = [
-    // Add more images list here
+    // CHANGE HERE: Add more images list here below
     'https://i.imgur.com/6WTAEzP.png',
     'https://i.imgur.com/oJ7Nc2N.jpeg',
     'https://i.imgur.com/tM0xd07.jpeg',
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 1000); // Delay for fade out to complete before changing the src
 
       // Set a new random interval for the next change
-      const newInterval = getRandomInterval(3000, 20000); // Random interval between 3000ms and 8000ms
+      const newInterval = getRandomInterval(3000, 20000); // Random interval between 3s and 20s
       setTimeout(change, newInterval); // Change the image again after the new interval
     };
 

@@ -42,8 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
 // For resizing the hero slider to fit a 59:30 ratio (design size: 1180 x 600)
 function heroSliderResizer() {
   const heroSliderElement = document.getElementById('heroSlider');
+  const viewportWidth = window.innerWidth;
   const width = heroSliderElement.clientWidth;
-  const height = width * 0.5084;
+  let height;
+  if (viewportWidth < 640) { 
+    height = width; // 1:1 on mobile
+  } else {
+    height = width * 0.5084; // Remain 59:30 ratio on desktop
+  }
 
   heroSliderElement.style.height = height + 'px';
 }
@@ -70,7 +76,7 @@ function heroSliderInit() {
           linear-gradient(
           180deg, 
           rgba(0,0,0,0.5) 20%, 
-          rgba(0,0,0,0.2) 80%, 
+          rgba(0,0,0,0.3) 80%, 
           rgba(0,0,0,0) 100%), 
           url('${slideURL}'
           )`;

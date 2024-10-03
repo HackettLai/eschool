@@ -52,6 +52,7 @@ function heroSliderResizer() {
   }
 
   heroSliderElement.style.height = height + 'px';
+  heroSliderInit();
 }
 
 // For initializing the hero slider with 4 slides and their respective background images

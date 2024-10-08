@@ -134,6 +134,10 @@ color: var(--main-green-0);
   transition-duration: 0.3s;
   text-decoration: none;
 }
+.btn-large{
+  padding: 16px;
+}
+
 .btn:hover {
   background-color: var(--main-green--1);
 }

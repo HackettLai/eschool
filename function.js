@@ -45,7 +45,7 @@ function heroSliderResizer() {
   const viewportWidth = window.innerWidth;
   const width = heroSliderElement.clientWidth;
   let height;
-  if (viewportWidth < 640) { 
+  if (viewportWidth < 640) {
     height = width; // 1:1 on mobile
   } else {
     height = width * 0.5084; // Remain 59:30 ratio on desktop
@@ -338,3 +338,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// For NFC page slider
+function setupRadioToggle() {
+  // Get the radio buttons
+  const radio1 = document.getElementById('radio-1');
+  const radio2 = document.getElementById('radio-2');
+
+  // Add event listeners for radio 1 and radio 2
+  radio1.addEventListener('click', function () {
+    // When radio 1 is clicked, show all case-1 elements and hide all case-2 elements
+    toggleDisplay('.case-1', true);
+    toggleDisplay('.case-2', false);
+  });
+
+  radio2.addEventListener('click', function () {
+    // When radio 2 is clicked, hide all case-1 elements and show all case-2 elements
+    toggleDisplay('.case-1', false);
+    toggleDisplay('.case-2', true);
+  });
+
+  // Function to toggle display based on class name
+  function toggleDisplay(selector, show) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element) => {
+      if (show) {
+        // Set display based on the element type
+        if (element.tagName.toLowerCase() === 'span') {
+          element.style.display = 'inline-block';
+        } else {
+          element.style.display = 'block';
+        }
+      } else {
+        element.style.display = 'none';
+      }
+    });
+  }
+
+  // Initialize by simulating a click on the checked radio button
+  if (radio1.checked) {
+    radio1.click();
+  } else if (radio2.checked) {
+    radio2.click();
+  }
+}
+
+// Call the function to set everything up
+setupRadioToggle();

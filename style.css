@@ -50,6 +50,7 @@ footer {
   font-weight: bold;
   text-align: center;
   color: var(--main-green-0);
+  width: 100%;
 }
 .sub-title {
   font-size: 20px;
@@ -73,6 +74,9 @@ footer {
   gap: 80px;
   margin: 80px 0px;
 }
+.inner-container {
+  gap: 80px;
+}
 
 @media screen and (max-width: 768px) {
   .main-container {
@@ -94,6 +98,13 @@ footer {
   max-width: 1180px;
   margin: 0px 20px;
   gap: 20px;
+}
+
+.inner{
+  background-color: var(--white);
+  border-radius: var(--card-radius);
+  padding: 0px 20px;
+  text-align: left;
 }
 
 /* for section with full width and fill grey background */
@@ -169,6 +180,10 @@ footer {
   align-items: flex-start; /*  align items to left under 2 column layout */
   flex: 1; /* set even space between columns */
 }
+.flex-2Col  .title{
+  text-align: left!important;
+}
+
 
 .flex-1 {
   flex: 1;
@@ -189,6 +204,10 @@ footer {
   /* Turn all flex-row to align center on mobile */
   .flex-2Col .flex-row {
     justify-content: center;
+  }
+
+  .flex-2Col  .title{
+    text-align: center!important;
   }
 }
 

@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans HK:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  /* color theme */
+  --white: hsl(0, 0%, 100%);
+  --main-green-0: hsl(80, 60%, 50%);
+  --main-green--1: hsl(82, 63%, 44%);
+  --main-green-0-rgb: 153, 204, 51;
+  --main-brown: hsl(37, 34%, 32%);
+  --grey-text: hsl(0, 0%, 38%);
+  --grey-light: hsl(210, 12%, 97%);
+  --grey-1: #ECECEC;
+  --grey-dark: hsl(228, 13%, 85%);
+  --main-green-4: hsl(70, 64%, 95%);
+  /* card style's border-radius */
+  --card-radius: 60px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--white);
+  font-family: Noto Sans HK;
+  color: var(--grey-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  padding: 12px 0px;
+  text-align: center;
+  border-top: solid 1px var(--grey-dark);
+}
+
+a{
+color: var(--main-green-0);
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --card-radius: 40px; /* reduce card radius on mobile */
+  }
+}
+
+/* Global: Text title style ------------------------------------ */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--main-green-0);
+}
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--main-brown);
+}
+.body-text {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--grey-text);
+}
+
+/* Global: Reusable element: Spacings style ------------------------------------ */
+
+/* for each section  */
+.section {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* set max width to 1180px and add margin on both sides */
+.container {
+  max-width: 1180px;
+  /* margin: 0px 20px; */
+  gap: 20px;
+}
+
+.inner {
+  background-color: var(--white);
+  border-radius: var(--card-radius);
+  padding: 0px 20px 40px;
+  text-align: left;
+  gap: 80px;
+  overflow: hidden;
+}
+
+/* for section with full width and fill grey background */
+.full-width-bg {
+  background-color: var(--grey-light);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+/* remove gap between flex items */
+.no-gap {
+  gap: 0;
+}
+.gap-20 {
+  gap: 20px;
+}
+/* inline image with text  */
+.inline-icon {
+  height: 52px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+/* Global: Reusable element ------------------------------------ */
+.btn {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 100%;
+  background-color: var(--main-green-0);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+.btn:hover {
+  background-color: var(--main-green--1);
+}
+
+/* Global: flex control ------------------------------------ */
+.flex-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* for 2 column layout */
+.flex-2Col {
+  display: flex;
+  align-items: center;
+}
+
+.flex-2Col > .container {
+  margin: 0; /* cancel margin on container for 2 column layout, space between columns use gap instead */
+  align-items: flex-start; /*  align items to left under 2 column layout */
+  flex: 1; /* set even space between columns */
+}
+.flex-2Col .title {
+  text-align: left !important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  /* Turn 2 Column to 1 Column on Mobile */
+  .flex-2Col {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Turn container to align center on mobile */
+  .flex-2Col .container {
+    align-items: unset;
+  }
+
+  /* Turn all flex-row to align center on mobile */
+  .flex-2Col .flex-row {
+    justify-content: center;
+  }
+
+  .flex-2Col .title {
+    text-align: center !important;
+  }
+}
+
+/* - */
+/* - */
+/* - */
+/* - */
+/* Elements specific begin*/
+
+/* Header Navigation: ------------------------------------*/
+.headerContainer {
+  width: 1180px;
+  max-width: calc(100% - 40px);
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.headerContainer img {
+  height: 54px;
+  margin: 0 auto 0 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.menu-btn {
+  height: fit-content;
+  padding: 4px 8px;
+  font-size: 16px;
+  color: var(--grey-text);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  border-radius: 4px;
+  display: block;
+}
+
+.menu-btn:hover,
+.currentPage {
+  background-color: var(--main-green-0);
+  color: var(--white);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  color: var(--grey-text);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .headerContainer {
+    justify-content: center;
+  }
+}
+
+/* school building divider  */
+.divider-school {
+  width: 100%;
+  height: 60px;
+  background-image: url('https://i.imgur.com/8JegBCT.jpeg');
+  background-repeat: repeat-x;
+  background-size: auto 60px;
+}
+
+/* 主要功能: ------------------------------------*/
+.feature-container {
+  align-items: flex-start;
+  gap: 20px;
+}
+.feature-item {
+  gap: 16px;
+}
+.feature-icon {
+  width: 52px;
+}
+.feature-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.remark {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.example-img{
+  width: 100%;
+  max-width: 295px;
+}
+
+.remark-number{
+  display: inline-block;
+  background-color: #fa3543;
+  color: var(--white);
+  width: 28px;
+  height:28px;
+  border-radius: 999px;
+  text-align: center;
+  margin: 0px 4px;
+}
+
+/* Slider Tab - */
+.tabs {
+  display: flex;
+  position: relative;
+  border: 1px solid var(--grey-1);
+  padding: 8px;
+  border-radius: 99px;
+  
+}
+.tabs * {
+  z-index: 2;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+  color: var(--grey-text);
+}
+
+
+input[type=radio]:checked + label {
+  color: var(--main-green-0);
+}
+
+input[id=radio-1]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+input[id=radio-2]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 44px;
+  width: 200px;
+  background-color: var(--main-green-4);
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
+}

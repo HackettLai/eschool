@@ -136,6 +136,12 @@ color: var(--main-green-0);
   background-color: var(--main-green--1);
 }
 
+.section-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--grey-1);  
+}
+
 /* Global: flex control ------------------------------------ */
 .flex-grid {
   display: flex;
@@ -265,7 +271,7 @@ color: var(--main-green-0);
   background-size: auto 60px;
 }
 
-/* 主要功能: ------------------------------------*/
+/* Main Content: ------------------------------------*/
 .feature-container {
   align-items: flex-start;
   gap: 20px;
@@ -302,7 +308,7 @@ color: var(--main-green-0);
   margin: 0px 4px;
 }
 
-/* Slider Tab - */
+/* Slider Tab ------------------------------------- */
 .tabs {
   display: flex;
   position: relative;
@@ -357,8 +363,11 @@ input[id=radio-2]:checked ~ .glider {
   transition: 0.25s ease-out;
 }
 
-@media (max-width: 700px) {
-  .tabs {
-    transform: scale(0.6);
+@media (max-width: 460px) {
+  .tab {
+    width: 120px;
+  }
+  .glider{
+    width: 120px;
   }
 }

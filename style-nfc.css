@@ -147,12 +147,17 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.gap-20{
+  gap: 20px;
 }
 
 /* Elements specific begin ------------------------------------*/

@@ -1,18 +1,53 @@
+// Centralized functions to run on page load and on resize ---------------------------------------
 function handleLoad() {
-  copyrightYear();
-  heroSliderInit();
-  heroSliderAutoPlay();
-  handleResize();
+  try {
+    handleResize();
+  } catch (error) {
+    console.error('Error in handleResize:', error);
+  }
+
+  try {
+    copyrightYear();
+  } catch (error) {
+    console.error('Error in copyrightYear:', error);
+  }
+
+  try {
+    heroSliderInit();
+  } catch (error) {
+    console.error('Error in heroSliderInit:', error);
+  }
+
+  try {
+    heroSliderAutoPlay();
+  } catch (error) {
+    console.error('Error in heroSliderAutoPlay:', error);
+  }
+  try {
+    setupRadioToggle();
+  } catch (error) {
+    console.error('Error in heroSliderAutoPlay:', error);
+  }
 }
 
 function handleResize() {
-  heroSliderResizer();
+  try {
+    ytPlayerResizer();
+  } catch (error) {
+    console.error('Error in ytPlayerResizer:', error);
+  }
+
+  try {
+    heroSliderResizer();
+  } catch (error) {
+    console.error('Error in heroSliderResizer:', error);
+  }
 }
 
 window.onload = handleLoad;
-window.onresize = handleResize;
+window.addEventListener('resize', handleResize);
 
-// For footer copyright year
+// For footer copyright year --------------------------------------------------------------------------
 function copyrightYear() {
   const thisYear = document.getElementById('thisYear');
   const year = new Date().getFullYear();
@@ -20,7 +55,7 @@ function copyrightYear() {
   thisYear.innerHTML = year;
 }
 
-// For mobile menu
+// For mobile menu --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
   const menuIconOpen = document.getElementById('menuIconOpen');
   const menuIconClose = document.getElementById('menuIconClose');
@@ -39,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// For Hero Slider --------------------------------------------------------------------------
 // For resizing the hero slider to fit a 59:30 ratio (design size: 1180 x 600)
 function heroSliderResizer() {
   const heroSliderElement = document.getElementById('heroSlider');
@@ -170,7 +206,7 @@ function heroSliderAutoPlay() {
   });
 }
 
-// For 我們的服務's Client logos
+// For 我們的服務's Client logos --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
   const imageList = [
     // CHANGE HERE: Add more images list here below
@@ -281,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// For 精選案例's tooltips
+// For 精選案例's tooltips --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.case-content').forEach((content) => {
     // Trim leading and trailing spaces from the <p> content
@@ -339,7 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// For NFC page slider Tabs
+// For NFC page  --------------------------------------------------------------------------
+// For Slider Tabs --------------------------------------------------------------------------
 function setupRadioToggle() {
   // Get the radio buttons
   const radio1 = document.getElementById('radio-1');
@@ -364,7 +401,7 @@ function setupRadioToggle() {
     elements.forEach((element) => {
       if (show) {
         // Check if the element has the class name
-        if (element.classList.contains('grouped-list') )  {
+        if (element.classList.contains('grouped-list')) {
           element.style.display = 'flex';
         } else if (element.tagName.toLowerCase() === 'span') {
           element.style.display = 'inline-block';
@@ -385,9 +422,7 @@ function setupRadioToggle() {
   }
 }
 
-setupRadioToggle();
-
-// For resizing the YouTube Player to fit a 16:9 ratio
+// For resizing the YouTube Player to fit a 16:9 ratio --------------------------------------------------------------------------
 function ytPlayerResizer() {
   const ytPlayer = document.getElementById('yt-player');
   if (ytPlayer) {
@@ -398,5 +433,3 @@ function ytPlayerResizer() {
     ytPlayer.style.height = height + 'px';
   }
 }
-ytPlayerResizer();
-window.addEventListener('resize', ytPlayerResizer);

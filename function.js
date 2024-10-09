@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// For NFC page slider
+// For NFC page slider Tabs
 function setupRadioToggle() {
   // Get the radio buttons
   const radio1 = document.getElementById('radio-1');
@@ -363,8 +363,10 @@ function setupRadioToggle() {
     const elements = document.querySelectorAll(selector);
     elements.forEach((element) => {
       if (show) {
-        // Set display based on the element type
-        if (element.tagName.toLowerCase() === 'span') {
+        // Check if the element has the class "abc"
+        if (element.classList.contains('grouped-list')) {
+          element.style.display = 'flex';
+        } else if (element.tagName.toLowerCase() === 'span') {
           element.style.display = 'inline-block';
         } else {
           element.style.display = 'block';
@@ -383,5 +385,18 @@ function setupRadioToggle() {
   }
 }
 
-// Call the function to set everything up
 setupRadioToggle();
+
+// For resizing the YouTube Player to fit a 16:9 ratio
+function ytPlayerResizer() {
+  const ytPlayer = document.getElementById('yt-player');
+  if (ytPlayer) {
+    // Ensure the element exists
+    const width = ytPlayer.clientWidth;
+    let height;
+    height = width * 0.5625; // Maintain 16:9 aspect ratio
+    ytPlayer.style.height = height + 'px';
+  }
+}
+ytPlayerResizer();
+window.addEventListener('resize', ytPlayerResizer);

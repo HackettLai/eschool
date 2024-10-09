@@ -39,8 +39,6 @@ footer {
   border-top: solid 1px var(--grey-dark);
 }
 
-
-
 @media screen and (max-width: 640px) {
   :root {
     --card-radius: 40px; /* reduce card radius on mobile */
@@ -127,18 +125,23 @@ a {
   transition-duration: 0.3s;
   text-decoration: none;
 }
-.btn-large {
-  padding: 16px;
-}
 
 .btn:hover {
   background-color: var(--main-green--1);
+}
+.btn-large {
+  padding: 16px;
 }
 
 .section-divider {
   width: 1px;
   height: 40px;
   background-color: var(--grey-1);
+}
+@media screen and (max-width: 360px) {
+  .btn-group {
+    flex-direction: column!important;
+  }
 }
 
 /* Global: flex control ------------------------------------ */
@@ -147,8 +150,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .flex-col {
@@ -156,7 +157,7 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.gap-20{
+.gap-20 {
   gap: 20px;
 }
 
@@ -248,14 +249,28 @@ a {
 }
 
 .remark-number {
+  font-size: 12px;
   display: inline-block;
+  vertical-align: middle;
   background-color: #fa3543;
   color: var(--white);
-  width: 28px;
-  height: 28px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
   border-radius: 999px;
   text-align: center;
   margin: 0px 4px;
+  transform: translate(0px, -2px);
+}
+
+@media screen and (max-width: 640px) {
+  .feature-item {
+    flex-direction: column;
+    width: 100%;
+  }
+  .feature-text {
+    text-align: center;
+  }
 }
 
 /* Slider Tab ------------------------------------- */

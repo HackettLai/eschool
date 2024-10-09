@@ -363,8 +363,8 @@ function setupRadioToggle() {
     const elements = document.querySelectorAll(selector);
     elements.forEach((element) => {
       if (show) {
-        // Check if the element has the class "abc"
-        if (element.classList.contains('grouped-list')) {
+        // Check if the element has the class name
+        if (element.classList.contains('grouped-list') )  {
           element.style.display = 'flex';
         } else if (element.tagName.toLowerCase() === 'span') {
           element.style.display = 'inline-block';
